@@ -1,3 +1,5 @@
+package task_1_7;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -67,7 +69,7 @@ public class Tasks {
         int arr[] = new int[10];
 
         for (int i = 0; i < 10; i++) {
-            arr[i] = random.nextInt(10);
+            arr[i] = random.nextInt();
             System.out.print(arr[i]+" , ");
         }
 

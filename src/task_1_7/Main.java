@@ -1,3 +1,5 @@
+package task_1_7;
+
 import java.util.InputMismatchException;
 
 public class Main {
@@ -28,10 +30,10 @@ public class Main {
 
 
             //4. Задан массив из 10 числе.Найти минимальное и максимальное значение в нем
-            //t.MinMax();
+            t.MinMax();
 
             //
-            //PetShop pSh = new PetShop(15, PetShop.Gender.MALE,11.5, PetShop.Animal.PENGUIN);
+            //task_1_7.PetShop pSh = new task_1_7.PetShop(15, task_1_7.PetShop.Gender.MALE,11.5, task_1_7.PetShop.Animal.PENGUIN);
             //System.out.println(pSh.sumPrice(2));
 
         } catch (ArrayIndexOutOfBoundsException e) {
