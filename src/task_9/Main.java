@@ -1,6 +1,6 @@
 package task_9;
 
-import org.w3c.dom.ranges.RangeException;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,15 +17,29 @@ public class Main {
 
             System.out.print("Input a second number: ");
             int num2 = in.nextInt();
+            if (checkDivider(num2)) {
 
 
-            System.out.println( num1 / num2);
+                System.out.println(num1 / num2);
+            }
 
 
+        }
+        catch (DivizionByZeroException e) {
 
-        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (ArithmeticException e) {
 
             System.out.println("Введенное вами число выходит за рамки допустимых значений ");
+        }
+
+    }
+    public static boolean checkDivider(int i) throws DivizionByZeroException
+    {
+        if(i!=0) return true;
+        else {
+            throw new DivizionByZeroException("Делитель не может быть равен 0");
         }
     }
 }
