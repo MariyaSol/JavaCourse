@@ -7,4 +7,10 @@ public class Main {
     // FloatTextInput, который валидирует, что число целое или дробное с точкой  -
     // для этого нужно вызвать  base.Validate()
     // проверить, что число целое и если не целое тогда проверять с точкой ли оно
+
+    public static void main(String[] args) {
+        TextInput t = new FloatTextInput();
+
+        System.out.println(t.Validate());
+    }
 }
