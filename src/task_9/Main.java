@@ -17,11 +17,12 @@ public class Main {
 
             System.out.print("Input a second number: ");
             int num2 = in.nextInt();
-            if (checkDivider(num2)) {
+
+            if(num1 == 0 || num2 == 0  ) throw new DivizionByZeroException("Введенное вами число выходит за рамки допустимых значений");
 
 
-                System.out.println(num1 / num2);
-            }
+            System.out.println(num1 / num2);
+
 
 
         }
@@ -29,17 +30,11 @@ public class Main {
 
             System.out.println(e.getMessage());
         }
-        catch (ArithmeticException e) {
+        catch (Exception e) {
 
-            System.out.println("Введенное вами число выходит за рамки допустимых значений ");
+            System.out.println(e.getMessage());
         }
 
     }
-    public static boolean checkDivider(int i) throws DivizionByZeroException
-    {
-        if(i!=0) return true;
-        else {
-            throw new DivizionByZeroException("Делитель не может быть равен 0");
-        }
-    }
+
 }
